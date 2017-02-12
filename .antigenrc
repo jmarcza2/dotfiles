@@ -1,0 +1,43 @@
+source /home/john/antigen.zsh
+
+antigen use oh-my-zsh
+antigen bundle git
+antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle zsh-users/zsh-history-substring-search
+antigen bundle thefuck
+antigen bundle z
+antigen bundle colored-man-pages
+antigen bundle zsh-users/zsh-completions
+antigen bundle extract
+antigen bundle djui/alias-tips
+antigen bundle KasperChristensen/mylocation
+antigen bundle zlsun/solarized-man
+
+antigen bundle edouard-lopez/yeoman-zsh-plugin
+antigen bundle chrissicool/zsh-bash
+antigen-bundle Tarrasch/zsh-colors
+
+antigen bundle RobSis/zsh-completion-generator
+antigen bundle joel-porquet/zsh-dircolors-solarized.git
+antigen bundle akoenig/gulp-autocompletion-zsh
+antigen bundle akoenig/npm-run.plugin.zsh
+antigen bundle lukechilds/zsh-better-npm-completion
+antigen bundle zsh-users/zsh-completions
+
+
+
+# You probably will want to install powerline fonts https://github.com/powerline/fonts
+antigen theme robbyrussell/oh-my-zsh themes/agnoster
+
+# Tell antigen that you're done.
+antigen apply
+
+# Automatically list directory contents on `cd`.
+auto-ls () { ls --classify; }
+chpwd_functions=( auto-ls $chpwd_functions )
+
+# wohwohwohowhohohoho!
+ fortune -s -n 300 | cowsay | lolcat
+
+# end_time="$(date +%s)"
+# echo .zshrc: $((end_time - start_time)) seconds
